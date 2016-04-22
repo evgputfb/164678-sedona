@@ -6,7 +6,7 @@
   </head>
   <body>
 
-    <div class="centering-container">
+    <div class="container">
 
       <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
       <header class="hotels-header">
@@ -24,51 +24,58 @@
 
       <main class="hotels-main">
 
-        <form class="hotels-search-form" action="">
+        <div class="hotels-search-form">
+          <form action="">
+            <div class="search-criterion infrastructure-criterion">
+              <h2>Инфраструктура:</h2>
 
-          <div class="search-criterion infrastructure-criterion">
-            <h2>Инфраструктура:</h2>
+              <input type="checkbox" name="pool" id="pool" checked>
+              <label for="pool">Бассейн</label>
 
-            <input type="checkbox" name="pool" id="pool" checked>
-            <label for="pool">Бассейн</label>
+              <input type="checkbox" name="parking" id="parking">
+              <label for="parking">Парковка</label>
 
-            <input type="checkbox" name="parking" id="parking">
-            <label for="parking">Парковка</label>
-
-            <input type="checkbox" name="wifi" id="wifi">
-            <label for="wifi">Wi-Fi</label>
-          </div>
-
-          <div class="search-criterion housing-type-criterion">
-            <h2>Тип жилья:</h2>
-
-            <input type="checkbox" name="hotel" id="hotel" checked>
-            <label for="hotel">Гостиница</label>
-
-            <input type="checkbox" name="motel" id="motel" checked>
-            <label for="motel">Мотель</label>
-
-            <input type="checkbox" name="apartments" id="apartments" checked>
-            <label for="apartments">Апартаменты</label>
-          </div>
-
-          <div class="search-criterion price-criterion">
-            <h2>Стоимость в сутки (р):</h2>
-            <div>
-              <!--  Пока не знаю, как сверстать фильтр по цене :`(  -->
+              <input type="checkbox" name="wifi" id="wifi">
+              <label for="wifi">Wi-Fi</label>
             </div>
-            <input type="submit" value="Показать">
-          </div>
 
-        </form>
+            <div class="search-criterion housing-type-criterion">
+              <h2>Тип жилья:</h2>
+
+              <input type="checkbox" name="hotel" id="hotel" checked>
+              <label for="hotel">Гостиница</label>
+
+              <input type="checkbox" name="motel" id="motel" checked>
+              <label for="motel">Мотель</label>
+
+              <input type="checkbox" name="apartments" id="apartments" checked>
+              <label for="apartments">Апартаменты</label>
+            </div>
+
+            <div class="search-criterion price-criterion">
+              <h2>Стоимость в сутки (р):</h2>
+              <div>
+                <!--  Пока не знаю, как сверстать фильтр по цене :`(  -->
+              </div>
+              <input type="submit" value="Показать">
+            </div>
+
+          </form>
+        </div>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
         <div class="search-results">
-          <h2>Найдено: 3</h2>
-          <span>Сортировка:</span>
-          <a href="">По цене</a>
-          <a href="">По типу</a>
-          <a href="">По рейтингу</a>
+          <div class="search-count">
+            Найдено: 3
+          </div>
+          <div class="sort-type">
+            Сортировка:
+            <ul>
+              <li><a href="">По цене</a></li>
+              <li><a href="">По типу</a></li>
+              <li><a href="">По рейтингу</a></li>
+            </ul>
+          </div>
           <div class="sort-direction">
             <a href="">▲</a>
             <a href="">▼</a>
@@ -82,7 +89,8 @@
           <div class="housing-details">
             <h1>Amara resort & spa</h1>
             <div class="housing-type-and-price">
-              <span>Гостиница</span><span>от 3500 р.</span>
+              <div class="housing-type">Гостиница</div>
+              <div class="housing-price">от 3500 р.</div>
             </div>
             <div class="housing-buttons">
               <a class="btn btn-blue" href="">Подробнее</a>
@@ -90,8 +98,12 @@
             </div>
           </div>
           <div class="housing-rating">
-            <img src="" alt="">
-            <span>Рейтинг: 8,5</span>
+            <div class="rating-stars">
+              <img src="" alt="">
+            </div>
+            <div class="rating">
+              Рейтинг: 8,5
+            </div>
           </div>
         </article>
 
@@ -102,7 +114,8 @@
           <div class="housing-details">
             <h1>Desert quail inn</h1>
             <div class="housing-type-and-price">
-              <span>Мотель</span><span>от 2000 р.</span>
+              <div class="housing-type">Мотель</div>
+              <div class="housing-price">от 2000 р.</div>
             </div>
             <div class="housing-buttons">
               <a class="btn btn-blue" href="">Подробнее</a>
@@ -110,8 +123,12 @@
             </div>
           </div>
           <div class="housing-rating">
-            <img src="" alt="">
-            <span>Рейтинг: 8,9</span>
+            <div class="rating-stars">
+              <img src="" alt="">
+            </div>
+            <div class="rating">
+              Рейтинг: 8,9
+            </div>
           </div>
         </article>
 
@@ -122,7 +139,8 @@
           <div class="housing-details">
             <h1>Villas at poco diablo</h1>
             <div class="housing-type-and-price">
-              <span>Апартаменты</span><span>от 4000 р.</span>
+              <div class="housing-type">Апартаменты</div>
+              <div class="housing-price">от 4000 р.</div>
             </div>
             <div class="housing-buttons">
               <a class="btn btn-blue" href="">Подробнее</a>
@@ -130,8 +148,12 @@
             </div>
           </div>
           <div class="housing-rating">
-            <img src="" alt="">
-            <span>Рейтинг: 9,2</span>
+            <div class="rating-stars">
+              <img src="" alt="">
+            </div>
+            <div class="rating">
+              Рейтинг: 9,2
+            </div>
           </div>
         </article>
 
