@@ -25,7 +25,7 @@ h2 {
 .container {
   min-width: 768px;
   max-width: 1200px;
-  width: 99.9%;
+  width: 100%;
   margin: 0 auto;
   outline: 2px dashed green;
 }
@@ -34,7 +34,6 @@ h2 {
 
 .page-header {
   font-size: 0;  /* Внутри инлайн-блоки, поэтому обнуляем размер шрифта */
-  outline: 1px solid green;
 }
 
 .page-header-index {
@@ -63,7 +62,7 @@ h2 {
   */
 }
 
-.main-menu ul li{
+.main-menu li{
   display: inline-block;
   width: 20%;
   height: 56px;
@@ -71,35 +70,34 @@ h2 {
   vertical-align: middle;
 }
 
-.main-menu ul li:nth-child(-n+2) {
+.main-menu li:nth-child(-n+2) {
   float: left;
 }
 
 /*-------------------------------------------*/
 /* Выравнивание внутри блоков - пунктов меню */
 
-.main-menu ul li:first-child {
+.main-menu li:first-child {
   text-align: left;
 }
 
-.main-menu ul li:nth-child(2),
-.main-menu ul li:nth-child(3) {
+.main-menu li:nth-child(2),
+.main-menu li:nth-child(3) {
   text-align: center;
 }
 
-.main-menu ul li:last-child {
+.main-menu li:last-child {
   text-align: right;
 }
 
 /*-------------------------------------------*/
 
-.main-menu ul li a{
+.main-menu-item {
   font-size: 14px;
   font-weight: bold;
   color: #000000;
   text-transform: uppercase;
   text-decoration: none;
-  outline: 1px dotted blue;
 }
 
 /*-------------------------------------------*/
@@ -117,7 +115,6 @@ h2 {
 .welcome-text {
   min-height: 435px;
   background: url("../img/welcome.png") no-repeat 50% 0;
-  outline: 1px solid blue;
 }
 
 /* ----------------------------------------------------------------------------------------------------------- */
@@ -126,8 +123,8 @@ h2 {
   width: 600px;
   margin: 0 auto;
   margin-top: 60px;
+  margin-bottom: 60px;
   text-align: center;
-  outline: 1px solid blue;
 }
 
 /* ----------------------------------------------------------------------------------------------------------- */
@@ -158,11 +155,11 @@ h2 {
 }
 
 .reason-image-town {
-  background: url("../img/town.jpg") no-repeat 0 0;
+  background: url("../img/town.jpg") no-repeat 50% 50%;
 }
 
 .reason-image-devil-bridge {
-  background: url("../img/devil-bridge.jpg") no-repeat 0 0;
+  background: url("../img/devil-bridge.jpg") no-repeat 50% 50%;
 }
 
 .reason-icon {
@@ -226,17 +223,111 @@ h2 {
   position: relative;
 }
 
+/* ----------------------------------------------------------------------------------------------------------- */
+
+.search-form {
+  display: block;
+  width: 513px;
+  padding-top: 59px;
+  padding-left: 55px;
+  padding-right: 0;
+  padding-bottom: 55px;
+  background-color: white;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.search-criterion * {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.search-criterion {
+  margin-bottom: 33px;
+}
+
+.search-criterion label {
+  width: 112px;
+}
+
+.search-criterion input {
+  width: 342px;
+}
+
+.search-criterion-visitors input {
+  width: 37px;
+}
+
+.search-criterion-visitors .btn {
+  width: 36px;
+}
+
+.search-criterion-visitors label[for="children-visitors"] {
+  margin-left: 55px;
+  width: 65px;
+}
+
+.search-form input[type="submit"] {
+  width: 458px;
+  font-size: 21px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background-color: #81b3d2;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-top: 22px;
+  cursor: pointer;
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+
 footer {
-  height: 120px;
   background-color: rgba(255,255,255,0.9);
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
+  font-size: 0;  /* потому что внутри - инлайн-блоки */
 }
 
 footer div {
   display: inline-block;
+  height: 120px;
+  line-height: 120px;
+  vertical-align: middle;
+  width: 33.333333%;
+  text-align: center;
 }
 
-/* ----------------------------------------------------------------------------------------------------------- */
+.hashtag {
+  font-size: 21px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+}
+
+.social-btn {
+  display: inline-block;
+  width: 46px;
+  height: 48px;
+  line-height: 120px;
+  vertical-align: middle;
+  background-color: #81b3d2;
+  margin: 0;
+  margin-right: 6px;
+}
+
+.web-studio {
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: black;
+}
+
+.web-studio a {
+  vertical-align: -15px;
+}

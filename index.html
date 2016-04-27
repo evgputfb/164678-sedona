@@ -15,10 +15,10 @@
         <div class="main-menu-container">
           <nav class="main-menu">
             <ul>
-              <li><a href="#">Информация</a></li>
-              <li><a href="#">Фото и видео</a></li>
-              <li><a href="#">Карта штата</a></li>
-              <li><a href="#">Гостиницы</a></li>
+              <li><a class="main-menu-item" href="#">Информация</a></li>
+              <li><a class="main-menu-item" href="#">Фото и видео</a></li>
+              <li><a class="main-menu-item" href="#">Карта штата</a></li>
+              <li><a class="main-menu-item" href="#">Гостиницы</a></li>
             </ul>
           </nav>
         </div>
@@ -84,7 +84,7 @@
           <div class="reason reason-gray">
             <h2>Мало<br>туристов</h2>
             <span>- №5 -</span>
-            <p>Большинство едет в Гранд Каньон и<br>толпится там<br>kjhkhkjhkjh</p>
+            <p>Большинство едет в Гранд Каньон и<br>толпится там</p>
           </div>
         </div>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -97,33 +97,35 @@
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
         <div class="bg-map-and-search-form">
 
-          <form class="search-form" action="#" method="#">
-            <div class="search-criterion">
-              <label for="arrive-date">Дата заезда:</label>
-              <input type="text" name="arrive-date" id="arrive-date" value="" placeholder="24 апреля 2016">
-              <img class="icon-calendar" src="" alt="">
-            </div>
-            <div class="search-criterion">
-              <label for="leave-date">Дата выезда:</label>
-              <input type="text" name="leave-date" id="leave-date" value="" placeholder="4 июля 2016">
-              <img class="icon-calendar" src="" alt="">
-            </div>
-            <div class="search-criterion">
-              <div class="search-criterion-visitors">
-                <label for="adult-visitors">Взрослые:</label>
-                <button class="btn btn-minus">-</button>
-                <input type="text" name="adult-visitors" id="adult-visitors" value="" placeholder="2">
-                <button class="btn btn-plus">+</button>
+          <div class="search-form">
+            <form action="#" method="#">
+              <div class="search-criterion">
+                <label for="arrive-date">Дата заезда:</label>
+                <input type="text" name="arrive-date" id="arrive-date" value="" placeholder="24 апреля 2016">
+                <img class="icon-calendar" src="" alt="">
               </div>
-              <div class="search-criterion-visitors">
-                <label for="children-visitors">Дети:</label>
-                <button class="btn btn-minus">-</button>
-                <input type="text" name="children-visitors" id="children-visitors" value="" placeholder="0">
-                <button class="btn btn-plus">+</button>
+              <div class="search-criterion">
+                <label for="leave-date">Дата выезда:</label>
+                <input type="text" name="leave-date" id="leave-date" value="" placeholder="4 июля 2016">
+                <img class="icon-calendar" src="" alt="">
               </div>
-            </div>
-            <input type="submit" value="Найти">
-          </form>
+              <div class="search-criterion">
+                <div class="search-criterion-visitors">
+                  <label for="adult-visitors">Взрослые:</label><!--
+                  --><button class="btn btn-minus">-</button><!--
+                  --><input type="text" name="adult-visitors" id="adult-visitors" value="" placeholder="2"><!--
+                  --><button class="btn btn-plus">+</button>
+                </div>
+                <div class="search-criterion-visitors">
+                  <label for="children-visitors">Дети:</label><!--
+                  --><button class="btn btn-minus">-</button><!--
+                  --><input type="text" name="children-visitors" id="children-visitors" value="" placeholder="0"><!--
+                  --><button class="btn btn-plus">+</button>
+                </div>
+              </div>
+              <input type="submit" value="Найти">
+            </form>
+          </div>
 
           <footer>
             <div class="hashtag">
@@ -135,8 +137,8 @@
               <a class="social-btn social-btn-yt" href="#">YouTube</a>
             </div>
             <div class="web-studio">
-              Website by
-              <a href=""><img src="" alt=""></a>
+              Website by &nbsp;
+              <a href=""><img src="img/html-academy-logo.png" width="113" height="39" alt="HTML Academy"></a>
             </div>
           </footer>
 
