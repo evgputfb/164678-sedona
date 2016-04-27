@@ -30,10 +30,15 @@ h2 {
   outline: 2px dashed green;
 }
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /* ----------------------------------------------------------------------------------------------------------- */
 
 .page-header {
-  font-size: 0;  /* Внутри инлайн-блоки, поэтому обнуляем размер шрифта */
 }
 
 .page-header-index {
@@ -41,7 +46,7 @@ h2 {
   background: url("../img/background.jpg") no-repeat 50% 0;
 }
 
-.page-header-hotels {
+.page-header-inner {
 }
 
 .main-menu-container {
@@ -54,34 +59,26 @@ h2 {
   list-style-type: none;
   padding: 0;
   margin: 0;
-
-  text-align: right;
-  /* Это влияет на все элементы меню, т.к. они inline-block.
-     Т.к. если зафлоатить вправо только последние 2 , то их порядок поменяется.
-     Поэтому делаем все инлайн-блоками, а первые два флоатим влево
-  */
 }
 
 .main-menu li{
-  display: inline-block;
-  width: 20%;
-  height: 56px;
-  line-height: 56px;
-  vertical-align: middle;
-}
-
-.main-menu li:nth-child(-n+2) {
   float: left;
+  width: 20%;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 /*-------------------------------------------*/
-/* Выравнивание внутри блоков - пунктов меню */
 
 .main-menu li:first-child {
   text-align: left;
 }
 
-.main-menu li:nth-child(2),
+.main-menu li:nth-child(2) {
+  text-align: center;
+  margin-right: 20%;
+}
+
 .main-menu li:nth-child(3) {
   text-align: center;
 }
@@ -103,11 +100,12 @@ h2 {
 /*-------------------------------------------*/
 
 .sedona-mini-logo {
-  position:absolute;
+  position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 138px;
+  height: 70px;
 }
 
 /*-------------------------------------------*/
@@ -123,21 +121,30 @@ h2 {
   width: 600px;
   margin: 0 auto;
   margin-top: 60px;
-  margin-bottom: 60px;
   text-align: center;
 }
+
+.title-content p {
+  margin-top: 27px;
+  margin-bottom: 51px;
+}
+
 
 /* ----------------------------------------------------------------------------------------------------------- */
 
 .reason-row {
-  font-size: 0;  /* потому что внутри - инлайн-блоки */
+  /* font-size: 0;  потому что внутри - инлайн-блоки */
+  display: table;
+  width:100%;
+  text-align: center;
 }
 
 .reason {
-  display: inline-block;
+  /* display: inline-block; */
+  display: table-cell;
   font-size: 14px;
-  height: 256px;
   vertical-align: top;
+  line-height: 21px;
 }
 
 .reason-blue {
@@ -148,6 +155,13 @@ h2 {
 
 .reason-blue h2 {
   color: white;
+  margin-top: 54px;
+  margin-bottom: 24px;
+}
+
+.reason-blue p {
+  margin-top: 21px;
+  margin-bottom: 52px;
 }
 
 .reason-image {
@@ -164,7 +178,27 @@ h2 {
 
 .reason-icon {
   width: 33.333333%;
-  height: 330px;
+}
+
+.reason-icon h2 {
+  margin-top: 161px;
+}
+
+.reason-icon p {
+  margin-top: 24px;
+  margin-bottom: 82px;
+}
+
+.reason-icon-house {
+  background: url("../img/icon-house.png") no-repeat 50% 60px;
+}
+
+.reason-icon-hamburger {
+  background: url("../img/icon-hamburger.png") no-repeat 50% 62px;
+}
+
+.reason-icon-souvenir {
+  background: url("../img/icon-souvenir.png") no-repeat 50% 56px;
 }
 
 .reason-row-gray {
@@ -173,6 +207,16 @@ h2 {
 
 .reason-gray {
   width: 33.333333%;
+}
+
+.reason-gray h2 {
+  margin-top: 47px;
+  margin-bottom: 24px;
+}
+
+.reason-gray p {
+  margin-top: 21px;
+  margin-bottom: 59px;
 }
 
 /* ----------------------------------------------------------------------------------------------------------- */
@@ -206,9 +250,8 @@ h2 {
 .btn-brown {
   background-color: #766357;
   width: 568px;
-  height: 86px;
-  line-height: 86px;
-  vertical-align: middle;
+  padding-top: 30px;
+  padding-bottom: 30px;
   margin: 0 auto;
   margin-top: 45px;
   cursor: pointer;
@@ -291,13 +334,13 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
+  padding-top: 36px;
+  padding-bottom: 36px;
   font-size: 0;  /* потому что внутри - инлайн-блоки */
 }
 
-footer div {
+footer>div {
   display: inline-block;
-  height: 120px;
-  line-height: 120px;
   vertical-align: middle;
   width: 33.333333%;
   text-align: center;
@@ -314,20 +357,18 @@ footer div {
   display: inline-block;
   width: 46px;
   height: 48px;
-  line-height: 120px;
   vertical-align: middle;
   background-color: #81b3d2;
   margin: 0;
   margin-right: 6px;
 }
 
-.web-studio {
+.web-studio * {
   font-size: 14px;
   font-weight: normal;
   text-transform: uppercase;
+  text-decoration: none;
   color: black;
-}
-
-.web-studio a {
-  vertical-align: -15px;
+  vertical-align: middle;
+  text-align: center;
 }
