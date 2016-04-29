@@ -27,7 +27,7 @@ h2 {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  outline: 2px dashed green;
+  outline: 3px solid rgb(210,240,120);
 }
 
 .clearfix:after {
@@ -50,8 +50,6 @@ h2 {
 }
 
 .main-menu-container {
-  padding-left:6%;
-  padding-right:6%;
   background-color: white;
 }
 
@@ -61,30 +59,16 @@ h2 {
   margin: 0;
 }
 
-.main-menu li{
+.main-menu li {
   float: left;
   width: 20%;
   padding-top: 15px;
   padding-bottom: 15px;
-}
-
-/*-------------------------------------------*/
-
-.main-menu li:first-child {
-  text-align: left;
+  text-align: center;
 }
 
 .main-menu li:nth-child(2) {
-  text-align: center;
   margin-right: 20%;
-}
-
-.main-menu li:nth-child(3) {
-  text-align: center;
-}
-
-.main-menu li:last-child {
-  text-align: right;
 }
 
 /*-------------------------------------------*/
@@ -133,14 +117,12 @@ h2 {
 /* ----------------------------------------------------------------------------------------------------------- */
 
 .reason-row {
-  /* font-size: 0;  потому что внутри - инлайн-блоки */
   display: table;
   width:100%;
   text-align: center;
 }
 
 .reason {
-  /* display: inline-block; */
   display: table-cell;
   font-size: 14px;
   vertical-align: top;
@@ -227,12 +209,12 @@ h2 {
   padding-top: 57px;
 }
 
-.interactive-search h2{
+.interactive-search h2 {
   font-size: 30px;
   margin: 0;
 }
 
-.interactive-search p{
+.interactive-search p {
   margin: 0;
   margin-top: 30px;
 }
@@ -271,7 +253,7 @@ h2 {
 .search-form {
   display: block;
   width: 513px;
-  padding-top: 59px;
+  padding-top: 55px;
   padding-left: 55px;
   padding-right: 0;
   padding-bottom: 55px;
@@ -280,15 +262,23 @@ h2 {
   font-size: 0;
 }
 
-.search-criterion * {
+.search-criterion label,
+.search-criterion input,
+.search-criterion button {
   display: inline-block;
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
+  vertical-align: middle;
 }
 
 .search-criterion {
-  margin-bottom: 33px;
+  margin-bottom: 29px;
+}
+
+.search-criterion:nth-child(3) {
+  margin-top: 30px;
+  margin-bottom: 54px;
 }
 
 .search-criterion label {
@@ -296,19 +286,36 @@ h2 {
 }
 
 .search-criterion input {
-  width: 342px;
+  width: 331px;
+  height: 38px;
+  padding: 0;
+  padding-left: 15px;
+  border: 0;
+  background-color: #f2f2f2;
+}
+
+.search-criterion-visitors {
+  display: inline-block;
 }
 
 .search-criterion-visitors input {
-  width: 37px;
+  padding-right: 15px;
+  text-align: center;
+  width: 14px;
 }
 
 .search-criterion-visitors .btn {
-  width: 36px;
+  width: 35px;
+  height: 38px;
+  border: 0;
+  color: gray;
+}
+
+.search-criterion-visitors:first-child {
+  margin-right: 53px;
 }
 
 .search-criterion-visitors label[for="children-visitors"] {
-  margin-left: 55px;
   width: 65px;
 }
 
@@ -322,35 +329,48 @@ h2 {
   border: none;
   padding-top: 16px;
   padding-bottom: 16px;
-  margin-top: 22px;
   cursor: pointer;
 }
 
 /* ----------------------------------------------------------------------------------------------------------- */
 
-footer {
+.footer-container {
   background-color: rgba(255,255,255,0.9);
+  color: black;
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  padding-top: 36px;
-  padding-bottom: 36px;
-  font-size: 0;  /* потому что внутри - инлайн-блоки */
+  min-height: 120px;
 }
 
-footer>div {
-  display: inline-block;
-  vertical-align: middle;
-  width: 33.333333%;
+.footer-section {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 30%;
+  padding-left: 1.666%;
+  padding-right: 1.666%;
   text-align: center;
 }
 
-.hashtag {
+.footer-hashtag-section {
+  left: 16.666%;
   font-size: 21px;
   font-weight: bold;
-  text-transform: uppercase;
-  color: black;
+}
+
+.footer-social-section {
+  left: 50%;
+}
+
+.footer-webstudio-section {
+  left: 83.333%;
+}
+
+.footer-webstudio-section span,
+.footer-webstudio-section img {
+  vertical-align: middle;
 }
 
 .social-btn {
@@ -361,14 +381,9 @@ footer>div {
   background-color: #81b3d2;
   margin: 0;
   margin-right: 6px;
+  font-size: 0;
 }
 
-.web-studio * {
-  font-size: 14px;
-  font-weight: normal;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: black;
-  vertical-align: middle;
-  text-align: center;
+.social-btn:last-child {
+  margin-right: 0;
 }
