@@ -13,7 +13,7 @@
       <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
       <header class="page-header page-header-inner">
         <div class="main-menu-container">
-          <nav class="main-menu">
+          <nav class="main-menu clearfix">
             <ul>
               <li><a class="main-menu-item" href="#">Информация</a></li>
               <li><a class="main-menu-item" href="#">Фото и видео</a></li>
@@ -28,35 +28,41 @@
 
       <div class="hotels-main">
 
-        <div class="hotels-search-form">
+        <div class="hotels-search-form clearfix">
           <form action="">
-            <div class="search-criterion infrastructure-criterion">
+            <div class="hotels-search-criterion infrastructure-criterion">
               <h2>Инфраструктура:</h2>
-
-              <input type="checkbox" name="pool" id="pool" checked>
-              <label for="pool">Бассейн</label>
-
-              <input type="checkbox" name="parking" id="parking">
-              <label for="parking">Парковка</label>
-
-              <input type="checkbox" name="wifi" id="wifi">
-              <label for="wifi">Wi-Fi</label>
+              <div class="hotels-search-item">
+                <input type="checkbox" name="pool" id="pool" checked>
+                <label for="pool">Бассейн</label>
+              </div>
+              <div class="hotels-search-item">
+                <input type="checkbox" name="parking" id="parking">
+                <label for="parking">Парковка</label>
+              </div>
+              <div class="hotels-search-item">
+                <input type="checkbox" name="wifi" id="wifi">
+                <label for="wifi">Wi-Fi</label>
+              </div>
             </div>
 
-            <div class="search-criterion housing-type-criterion">
+            <div class="hotels-search-criterion housing-type-criterion">
               <h2>Тип жилья:</h2>
-
-              <input type="checkbox" name="hotel" id="hotel" checked>
-              <label for="hotel">Гостиница</label>
-
-              <input type="checkbox" name="motel" id="motel" checked>
-              <label for="motel">Мотель</label>
-
-              <input type="checkbox" name="apartments" id="apartments" checked>
-              <label for="apartments">Апартаменты</label>
+              <div class="hotels-search-item">
+                <input type="checkbox" name="hotel" id="hotel" checked>
+                <label for="hotel">Гостиница</label>
+              </div>
+              <div class="hotels-search-item">
+                <input type="checkbox" name="motel" id="motel" checked>
+                <label for="motel">Мотель</label>
+              </div>
+              <div class="hotels-search-item">
+                <input type="checkbox" name="apartments" id="apartments" checked>
+                <label for="apartments">Апартаменты</label>
+              </div>
             </div>
 
-            <div class="search-criterion price-criterion">
+            <div class="hotels-search-criterion price-criterion">
               <h2>Стоимость в сутки (р):</h2>
               <div>
                 <!--  Пока не знаю, как сверстать фильтр по цене :`(  -->
@@ -68,7 +74,7 @@
         </div>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
-        <div class="search-results">
+        <div class="search-results clearfix">
           <div class="search-count">
             Найдено: 3
           </div>
@@ -97,8 +103,8 @@
               <div class="housing-price">от 3500 р.</div>
             </div>
             <div class="housing-buttons">
-              <a class="btn btn-blue" href="">Подробнее</a>
-              <a class="btn btn-brown" href="">Забронировать</a>
+              <a class="btn btn-hotel-details" href="">Подробнее</a>
+              <a class="btn btn-make-reservation" href="">Забронировать</a>
             </div>
           </div>
           <div class="housing-rating">
@@ -122,8 +128,8 @@
               <div class="housing-price">от 2000 р.</div>
             </div>
             <div class="housing-buttons">
-              <a class="btn btn-blue" href="">Подробнее</a>
-              <a class="btn btn-brown" href="">Забронировать</a>
+              <a class="btn btn-hotel-details" href="">Подробнее</a>
+              <a class="btn btn-make-reservation" href="">Забронировать</a>
             </div>
           </div>
           <div class="housing-rating">
@@ -147,8 +153,8 @@
               <div class="housing-price">от 4000 р.</div>
             </div>
             <div class="housing-buttons">
-              <a class="btn btn-blue" href="">Подробнее</a>
-              <a class="btn btn-brown" href="">Забронировать</a>
+              <a class="btn btn-hotel-details" href="">Подробнее</a>
+              <a class="btn btn-make-reservation" href="">Забронировать</a>
             </div>
           </div>
           <div class="housing-rating">
@@ -163,24 +169,26 @@
 
       </div>
 
-      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-      <footer>
-        <div class="footer-container">
-          <div class="footer-section footer-hashtag-section">
-            #visitsedona
+      <div class="footer-white-space">
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <footer>
+          <div class="footer-container">
+            <div class="footer-section footer-hashtag-section">
+              #visitsedona
+            </div>
+            <div class="footer-section footer-social-section">
+              <a class="social-btn social-btn-tw" href="#">Twitter</a>
+              <a class="social-btn social-btn-fb" href="#">Facebook</a>
+              <a class="social-btn social-btn-yt" href="#">YouTube</a>
+            </div>
+            <div class="footer-section footer-webstudio-section">
+              <span>Website by &nbsp;</span>
+              <a href=""><img src="img/html-academy-logo.png" width="113" height="39" alt="HTML Academy"></a>
+            </div>
           </div>
-          <div class="footer-section footer-social-section">
-            <a class="social-btn social-btn-tw" href="#">Twitter</a>
-            <a class="social-btn social-btn-fb" href="#">Facebook</a>
-            <a class="social-btn social-btn-yt" href="#">YouTube</a>
-          </div>
-          <div class="footer-section footer-webstudio-section">
-            <span>Website by &nbsp;</span>
-            <a href=""><img src="img/html-academy-logo.png" width="113" height="39" alt="HTML Academy"></a>
-          </div>
-        </div>
-      </footer>
-      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        </footer>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+      </div>
 
     </div>
 

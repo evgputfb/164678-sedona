@@ -23,6 +23,7 @@ h2 {
 }
 
 .container {
+  position: relative;  /*  чтобы сработал абсолют на странице hotels */
   min-width: 768px;
   max-width: 1200px;
   width: 100%;
@@ -225,11 +226,13 @@ h2 {
   text-align: center;
   font-size: 21px;
   font-weight: bold;
+  text-decoration: none;
   color: white;
+  background-color: #766357;
   padding: 0;
 }
 
-.btn-brown {
+.btn-search-housing {
   background-color: #766357;
   width: 568px;
   padding-top: 30px;
@@ -308,7 +311,8 @@ h2 {
   width: 35px;
   height: 38px;
   border: 0;
-  color: gray;
+  color: #a9a9a9;
+  background-color: #f2f2f2;
 }
 
 .search-criterion-visitors:first-child {
@@ -386,4 +390,215 @@ h2 {
 
 .social-btn:last-child {
   margin-right: 0;
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------- */
+
+/*  Стили для внутренней страницы  */
+
+.hotels-search-form {
+  min-height: 217px;
+  padding: 0;
+  margin: 0;
+  color: white;
+  background: #668eb5 url("../img/filter-background.jpg") no-repeat 50% -56px;
+}
+
+.hotels-search-criterion {
+  padding: 0;
+  margin: 0;
+  padding-top:27px;
+  outline: 1px solid yellow;
+}
+
+.hotels-search-criterion h2 {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 21px;
+  color: white;
+}
+
+.hotels-search-item {
+  padding: 0;
+  margin: 0;
+  margin-top: 24px;
+  font-size: 14px;
+  line-height: 21px;
+  outline: 1px solid green;
+}
+
+.hotels-search-item input,
+.hotels-search-item label {
+  vertical-align: middle;
+}
+
+.infrastructure-criterion {
+  float: left;
+  margin-left: 6%;
+}
+
+.housing-type-criterion {
+  float: left;
+  margin-left: 10%;
+}
+
+.price-criterion {
+  float: right;
+  margin-right: 6%;
+  padding-right: 0;
+}
+
+/* -------------------------------------------------------------------------------- */
+
+.search-results {
+  display: table;
+  position: relative;
+  padding: 0;
+  padding-left: 6%;
+  padding-right: 6%;
+  background-color: #fefefe;
+  border-bottom: 1px solid #e5e5e5;
+  width: 88%;  /* = 100% - 6% -6% */
+}
+
+.search-count {
+  display: table-cell;
+  margin: 0;
+  padding: 30px 0;
+  width: 165px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: black;
+  vertical-align: middle;
+}
+
+.sort-type {
+  display: table-cell;
+  margin: 0;
+  padding: 0;
+  padding-top: 32px;
+  padding-bottom: 28px;
+  vertical-align: middle;
+  font-size: 12px;
+  line-height: 18px;
+  color: black;
+}
+
+.sort-type ul {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+  margin-left: 36px;
+}
+
+.sort-type li {
+  display: inline;
+  margin-right: 29px;
+}
+
+.sort-type a {
+  text-decoration: none;
+}
+
+.sort-direction {
+  position: absolute;
+  right: 6%;
+  top: 50%;
+  transform: translate(0,-50%);
+  outline: 1px dotted red;
+}
+
+/* -------------------------------------------------------------------------------- */
+
+.housing {
+  display: table;
+  position: relative;
+  padding: 0 6%;
+  color: black;
+  background-color: #fefefe;
+  border-bottom: 1px solid #e5e5e5;
+  width: 88%;  /* = 100% - 6% -6% */
+  min-height: 150px;
+}
+
+.housing-image {
+  display: table-cell;
+  margin: 0;
+  padding: 0;
+  padding-top: 30px;
+  width: 165px;
+}
+
+.housing-image img {
+  vertical-align: middle;
+}
+
+.housing-details {
+  display: table-cell;
+  margin: 0;
+  padding: 0;
+  padding-top: 25px;
+  vertical-align: top;
+  color: black;
+}
+
+.housing-rating {
+  position: absolute;
+  right: 6%;
+  top: 50%;
+  transform: translate(0,-50%);
+  outline: 1px dotted red;
+}
+
+.housing-details h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: black;
+}
+
+.housing-type-and-price {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: #333333;
+  margin-top: 6px;
+  margin-bottom: 14px;
+}
+
+.housing-type,
+.housing-price {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.btn-hotel-details,
+.btn-make-reservation {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 21px;
+  background-color: #766357;
+  cursor: pointer;
+  padding: 3px 17px;
+}
+
+.btn-hotel-details {
+  background-color: #81b3d2;
+  margin-right: 2px;
+}
+
+/* -------------------------------------------------------------------------------- */
+
+.footer-white-space {
+  position: relative;
+  min-height: 120px;
 }
