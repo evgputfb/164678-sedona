@@ -23,7 +23,6 @@ h2 {
 }
 
 .container {
-  position: relative;  /*  чтобы сработал абсолют на странице hotels */
   min-width: 768px;
   max-width: 1200px;
   width: 100%;
@@ -40,6 +39,7 @@ h2 {
 /* ----------------------------------------------------------------------------------------------------------- */
 
 .page-header {
+  position: relative; /* внутри есть абсолютный элемент - sedona-mini-logo */
 }
 
 .page-header-index {
@@ -52,27 +52,51 @@ h2 {
 
 .main-menu-container {
   background-color: white;
+  padding: 0 6%;
+  padding-top: 14px;
+  padding-bottom: 16px;
 }
 
 .main-menu ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  font-size: 0;
 }
 
 .main-menu li {
-  float: left;
+  display: inline-block;
   width: 20%;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  text-align: center;
+  padding: 0;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.main-menu li:nth-child(1),
+.main-menu li:nth-child(2) {
+  text-align: left;
+}
+
+.main-menu li:nth-child(3),
+.main-menu li:nth-child(4) {
+  text-align: right;
+}
+
+.main-menu li:nth-child(1) {
+  margin-right: 3%;
 }
 
 .main-menu li:nth-child(2) {
-  margin-right: 20%;
+  margin-right: 7%;
 }
 
-/*-------------------------------------------*/
+.main-menu li:nth-child(3) {
+  margin-left: 7%;
+}
+
+.main-menu li:nth-child(4) {
+  margin-left: 3%;
+}
 
 .main-menu-item {
   font-size: 14px;
@@ -80,6 +104,7 @@ h2 {
   color: #000000;
   text-transform: uppercase;
   text-decoration: none;
+  vertical-align: middle;
 }
 
 /*-------------------------------------------*/
@@ -96,8 +121,9 @@ h2 {
 /*-------------------------------------------*/
 
 .welcome-text {
-  min-height: 435px;
-  background: url("../img/welcome.png") no-repeat 50% 0;
+  padding: 0;
+  padding-top: 76px;
+  text-align: center;
 }
 
 /* ----------------------------------------------------------------------------------------------------------- */
@@ -296,6 +322,7 @@ h2 {
 
 .search-criterion-visitors {
   display: inline-block;
+  font-size: 0;
 }
 
 .search-criterion-visitors input {
@@ -342,31 +369,39 @@ h2 {
   left: 0;
   right: 0;
   bottom: 0;
-  min-height: 120px;
+  padding: 36px 0;
+}
+
+.footer-container-inner {
+  background-color: #fefefe;
+  color: black;
+  padding: 36px 0;
 }
 
 .footer-section {
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  width: 30%;
-  padding-left: 1.666%;
-  padding-right: 1.666%;
   text-align: center;
 }
 
 .footer-hashtag-section {
-  left: 16.666%;
+  float: left;
+  width: 33.333%;
   font-size: 21px;
   font-weight: bold;
+  padding: 11px 0;
 }
 
 .footer-social-section {
-  left: 50%;
+  float: left;
+  width: 33.333%;
+  font-size: 0;
 }
 
 .footer-webstudio-section {
-  left: 83.333%;
+  float: right;
+  width: 33.333%;
+  padding: 0;
+  padding-top: 5px;
+  padding-bottom: 4px;
 }
 
 .footer-webstudio-section span,
@@ -382,7 +417,6 @@ h2 {
   background-color: #81b3d2;
   margin: 0;
   margin-right: 6px;
-  font-size: 0;
 }
 
 .social-btn:last-child {
@@ -406,7 +440,6 @@ h2 {
   padding: 0;
   margin: 0;
   padding-top:27px;
-  outline: 1px solid yellow;
 }
 
 .hotels-search-criterion h2 {
@@ -423,7 +456,6 @@ h2 {
   margin-top: 24px;
   font-size: 14px;
   line-height: 21px;
-  outline: 1px solid green;
 }
 
 .hotels-search-item input,
@@ -445,6 +477,7 @@ h2 {
 .price-criterion {
   float: right;
   width: 31%;
+  outline: 1px solid yellow;
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -615,6 +648,10 @@ h2 {
   margin-right: 6px;
 }
 
+.rating-stars {
+  text-align: right;
+}
+
 .rating {
   margin-top: 39px;
   background-color: #f2f2f2;
@@ -626,8 +663,3 @@ h2 {
 }
 
 /* -------------------------------------------------------------------------------- */
-
-.footer-white-space {
-  position: relative;
-  min-height: 120px;
-}
