@@ -255,11 +255,8 @@ h2 {
 
 .search-form {
   display: block;
-  width: 513px;
-  padding-top: 55px;
-  padding-left: 55px;
-  padding-right: 0;
-  padding-bottom: 55px;
+  width: 458px;
+  padding: 55px;
   background-color: white;
   margin: 0 auto;
   font-size: 0;
@@ -399,7 +396,7 @@ h2 {
 
 .hotels-search-form {
   min-height: 217px;
-  padding: 0;
+  padding: 0 6%;
   margin: 0;
   color: white;
   background: #668eb5 url("../img/filter-background.jpg") no-repeat 50% -56px;
@@ -436,55 +433,59 @@ h2 {
 
 .infrastructure-criterion {
   float: left;
-  margin-left: 6%;
+  width: 160px;
 }
 
 .housing-type-criterion {
   float: left;
-  margin-left: 10%;
+  width: 160px;
+  margin-left: 9%;
 }
 
 .price-criterion {
   float: right;
-  margin-right: 6%;
-  padding-right: 0;
+  width: 31%;
 }
 
 /* -------------------------------------------------------------------------------- */
 
 .search-results {
-  display: table;
-  position: relative;
-  padding: 0;
-  padding-left: 6%;
-  padding-right: 6%;
+  padding: 0 6%;
   background-color: #fefefe;
   border-bottom: 1px solid #e5e5e5;
-  width: 88%;  /* = 100% - 6% -6% */
 }
 
 .search-count {
-  display: table-cell;
+  float: left;
   margin: 0;
   padding: 30px 0;
-  width: 165px;
+  width: 164px;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
   color: black;
-  vertical-align: middle;
 }
 
 .sort-type {
-  display: table-cell;
+  float: left;
+  width: 440px;
   margin: 0;
   padding: 0;
   padding-top: 32px;
-  padding-bottom: 28px;
-  vertical-align: middle;
+  font-size: 0;
+  color: black;
+}
+
+.sort-direction {
+  float: right;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.sort-type span {
   font-size: 12px;
   line-height: 18px;
-  color: black;
+  vertical-align: middle;
 }
 
 .sort-type ul {
@@ -492,66 +493,67 @@ h2 {
   padding: 0;
   display: inline-block;
   list-style-type: none;
-  margin-left: 36px;
+  margin-left: 37px;
+  vertical-align: middle;
+  font-size: 0;
 }
 
 .sort-type li {
-  display: inline;
-  margin-right: 29px;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0;
+  padding: 0;
+  margin-right: 30px;
+  vertical-align: middle;
+}
+
+.sort-type li:last-child {
+  margin-right: 0;
 }
 
 .sort-type a {
   text-decoration: none;
 }
 
-.sort-direction {
-  position: absolute;
-  right: 6%;
-  top: 50%;
-  transform: translate(0,-50%);
-  outline: 1px dotted red;
+.sort-direction a {
+  text-decoration: none;
 }
 
 /* -------------------------------------------------------------------------------- */
 
 .housing {
-  display: table;
-  position: relative;
   padding: 0 6%;
   color: black;
   background-color: #fefefe;
   border-bottom: 1px solid #e5e5e5;
-  width: 88%;  /* = 100% - 6% -6% */
-  min-height: 150px;
 }
 
 .housing-image {
-  display: table-cell;
+  float: left;
+  width: 135px;
   margin: 0;
-  padding: 0;
-  padding-top: 30px;
-  width: 165px;
+  padding: 30px 0;
 }
 
 .housing-image img {
+  margin: 0;
   vertical-align: middle;
 }
 
 .housing-details {
-  display: table-cell;
+  float: left;
+  width: 56%;
   margin: 0;
-  padding: 0;
-  padding-top: 25px;
-  vertical-align: top;
+  margin-left: 30px;
+  padding: 25px 0;
   color: black;
 }
 
 .housing-rating {
-  position: absolute;
-  right: 6%;
-  top: 50%;
-  transform: translate(0,-50%);
-  outline: 1px dotted red;
+  float: right;
+  width: 120px;
+  padding: 28px 0;
 }
 
 .housing-details h1 {
@@ -566,18 +568,33 @@ h2 {
 .housing-type-and-price {
   margin: 0;
   padding: 0;
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: normal;
-  color: #333333;
-  margin-top: 6px;
-  margin-bottom: 14px;
+  font-size: 0;
+  margin-top: 4px;
+  margin-bottom: 12px;
 }
 
 .housing-type,
 .housing-price {
   display: inline-block;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: #333333;
   vertical-align: middle;
+}
+
+.housing-type {
+  padding-right: 10px;
+  min-width: 106px;
+  max-width: 230px;
+}
+
+.housing-price {
+  max-width: 130px;
+}
+
+.housing-buttons {
+  font-size: 0;
 }
 
 .btn-hotel-details,
@@ -589,11 +606,23 @@ h2 {
   background-color: #766357;
   cursor: pointer;
   padding: 3px 17px;
+  max-width: 150px;
+  vertical-align: middle;
 }
 
 .btn-hotel-details {
   background-color: #81b3d2;
-  margin-right: 2px;
+  margin-right: 6px;
+}
+
+.rating {
+  margin-top: 39px;
+  background-color: #f2f2f2;
+  color: #666666;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  padding: 3px 0;
 }
 
 /* -------------------------------------------------------------------------------- */
