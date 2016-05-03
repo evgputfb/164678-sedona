@@ -43,8 +43,8 @@ h2 {
 }
 
 .page-header-index {
-  min-height: 557px;
-  background: url("../img/background.jpg") no-repeat 50% 0;
+  /*min-height: 565px;
+  background: url("../img/background.jpg") no-repeat 50% 0;*/
 }
 
 .page-header-inner {
@@ -116,15 +116,29 @@ h2 {
   transform: translateX(-50%);
   width: 138px;
   height: 70px;
+  z-index: 10;
 }
 
 /*-------------------------------------------*/
 
 .welcome-text {
+  position: relative;
   padding: 0;
   padding-top: 76px;
   text-align: center;
+  min-height: 432px;
+  background: #a7c9df url("../img/background.jpg") no-repeat 50% -56px;
 }
+
+.deco-shape {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 57px;
+  background: url("../img/deco-shape.png") no-repeat 50% 0;
+}
+
 
 /* ----------------------------------------------------------------------------------------------------------- */
 
@@ -178,11 +192,11 @@ h2 {
 }
 
 .reason-image-town {
-  background: url("../img/town.jpg") no-repeat 50% 50%;
+  background: #686f40 url("../img/town.jpg") no-repeat 50% 54%;
 }
 
 .reason-image-devil-bridge {
-  background: url("../img/devil-bridge.jpg") no-repeat 50% 50%;
+  background: #926756 url("../img/devil-bridge.jpg") no-repeat 50% 53%;
 }
 
 .reason-icon {
@@ -272,7 +286,7 @@ h2 {
 
 .bg-map-and-search-form {
   min-height: 593px;
-  background: url("../img/map.jpg") no-repeat 50% 0;
+  background: #cbddaa url("../img/map.jpg") no-repeat 50% 0;
   margin: 0;
   position: relative;
 }
@@ -433,7 +447,7 @@ h2 {
   padding: 0 6%;
   margin: 0;
   color: white;
-  background: #668eb5 url("../img/filter-background.jpg") no-repeat 50% -56px;
+  background: #5c7183 url("../img/filter-background.jpg") no-repeat 50% -56px;
 }
 
 .hotels-search-criterion {
@@ -477,7 +491,6 @@ h2 {
 .price-criterion {
   float: right;
   width: 31%;
-  outline: 1px solid yellow;
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -511,8 +524,10 @@ h2 {
 
 .sort-direction {
   float: right;
+  width: 50px;
   padding-top: 30px;
   padding-bottom: 30px;
+  text-align: right;
 }
 
 .sort-type span {
@@ -660,6 +675,116 @@ h2 {
   line-height: 21px;
   text-align: center;
   padding: 3px 0;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* Стили для фильтра по цене */
+
+.price-controls {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 32px;
+  font-size: 0;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 30px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 50%;
+  text-align: center;
+}
+
+.price-controls input {
+  width: 40px;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.range-controls {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.price-criterion input[type="submit"] {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 34px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.price-criterion input[type="submit"]:hover {
+  color: #000000;
+  background: #ffffff;
 }
 
 /* -------------------------------------------------------------------------------- */
