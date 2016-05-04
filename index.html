@@ -26,7 +26,6 @@
         <img class="sedona-mini-logo" src="img/mini-logo.png" width="138" height="70" alt="Logo">
         <div class="welcome-text">
           <img src="img/welcome2sedona.png" width="458" height="352" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!">
-          <div class="deco-shape"></div>
         </div>
       </header>
       <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -43,7 +42,7 @@
           <div class="reason reason-blue">
             <h2>Настоящий<br>городок</h2>
             <span>&mdash; №1 &mdash;</span>
-            <p>Седона &mdash; не аттракцион для туристов,<br> там течет своя жизнь</p>
+            <p>Седона &mdash; не аттракцион для&nbsp;туристов, там&nbsp;течет своя&nbsp;жизнь</p>
           </div>
           <div class="reason reason-image reason-image-town">
           </div>
@@ -52,15 +51,15 @@
         <div class="reason-row">
           <div class="reason reason-icon reason-icon-house">
             <h2>Жилье</h2>
-            <p>Рекомендуем пожить в настоящем<br>мотеле, все как в кино!</p>
+            <p>Рекомендуем пожить в&nbsp;настоящем мотеле, все&nbsp;как&nbsp;в&nbsp;кино!</p>
           </div>
           <div class="reason reason-icon reason-icon-hamburger">
             <h2>Еда</h2>
-            <p>Всегда заказывайте фирменный бургер,<br>вы не разочаруетесь!</p>
+            <p>Всегда заказывайте фирменный бургер, вы&nbsp;не&nbsp;разочаруетесь!</p>
           </div>
           <div class="reason reason-icon reason-icon-souvenir">
             <h2>Сувениры</h2>
-            <p>Не только китайского, но и местного<br>производства!</p>
+            <p>Не только китайского, но&nbsp;и&nbsp;местного производства!</p>
           </div>
         </div>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -70,7 +69,7 @@
           <div class="reason reason-blue">
             <h2>Там есть<br>мост дьявола</h2>
             <span>&mdash; №2 &mdash;</span>
-            <p>Да, по нему можно пройти! Если конечно<br>вы осмелитесь</p>
+            <p>Да, по нему можно пройти! Если конечно вы&nbsp;осмелитесь</p>
           </div>
         </div>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -78,17 +77,17 @@
           <div class="reason reason-gray">
             <h2>Небольшая<br>площадь</h2>
             <span>&mdash; №3 &mdash;</span>
-            <p>Все достопримечательности<br>находятся очень близко</p>
+            <p>Все достопримечательности находятся очень близко</p>
           </div>
           <div class="reason reason-gray">
             <h2>Красивая<br>дорога</h2>
             <span>&mdash; №4 &mdash;</span>
-            <p>Ехать в Седону из Лас-Вегаса совсем<br>не скучно!</p>
+            <p>Ехать в Седону из Лас&#8209;Вегаса совсем не&nbsp;скучно!</p>
           </div>
           <div class="reason reason-gray">
             <h2>Мало<br>туристов</h2>
             <span>&mdash; №5 &mdash;</span>
-            <p>Большинство едет в Гранд Каньон и<br>толпится там</p>
+            <p>Большинство едет в Гранд&nbsp;Каньон и толпится&nbsp;там</p>
           </div>
         </div>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -106,25 +105,25 @@
               <div class="search-criterion">
                 <label for="arrive-date">Дата заезда:</label>
                 <input type="text" name="arrive-date" id="arrive-date" value="" placeholder="24 апреля 2016">
-                <img class="icon-calendar" src="" width="0" height="0" alt="">
+                <button class="btn-calendar btn-arrive-date"><span class="icon-calendar"></span></button>
               </div>
               <div class="search-criterion">
                 <label for="leave-date">Дата выезда:</label>
                 <input type="text" name="leave-date" id="leave-date" value="" placeholder="4 июля 2016">
-                <img class="icon-calendar" src="" width="0" height="0" alt="">
+                <button class="btn-calendar btn-leave-date"><span class="icon-calendar"></span></button>
               </div>
               <div class="search-criterion">
                 <div class="search-criterion-visitors">
                   <label for="adult-visitors">Взрослые:</label>
-                  <button class="btn btn-minus">-</button>
+                  <button class="btn-plus-minus btn-minus-adults"><span class="icon-minus"></span></button>
                   <input type="text" name="adult-visitors" id="adult-visitors" value="" placeholder="2">
-                  <button class="btn btn-plus">+</button>
+                  <button class="btn-plus-minus btn-plus-adults"><span class="icon-plus"></span></button>
                 </div>
                 <div class="search-criterion-visitors">
                   <label for="children-visitors">Дети:</label>
-                  <button class="btn btn-minus">-</button>
+                  <button class="btn-plus-minus btn-minus-children"><span class="icon-minus"></span></button>
                   <input type="text" name="children-visitors" id="children-visitors" value="" placeholder="0">
-                  <button class="btn btn-plus">+</button>
+                  <button class="btn-plus-minus btn-plus-children"><span class="icon-plus"></span></button>
                 </div>
               </div>
               <input type="submit" value="Найти">
@@ -137,9 +136,9 @@
                 #visitsedona
               </div>
               <div class="footer-section footer-social-section">
-                <a class="social-btn social-btn-tw" href="#">TW</a>
-                <a class="social-btn social-btn-fb" href="#">FB</a>
-                <a class="social-btn social-btn-yt" href="#">YT</a>
+                <a class="social-btn" href="#"><span class="icon-twitter"></span>Twitter</a>
+                <a class="social-btn" href="#"><span class="icon-facebook"></span>Facebook</a>
+                <a class="social-btn" href="#"><span class="icon-youtube"></span>YouTube</a>
               </div>
               <div class="footer-section footer-webstudio-section">
                 <span>Website by &nbsp;</span>

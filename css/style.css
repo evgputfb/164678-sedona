@@ -8,6 +8,52 @@ body {
   text-transform: uppercase;
 }
 
+/* -------------------------------------------------------------*/
+/* Иконочный шрифт */
+
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+
+  font-family: "symbols-sedona";
+  src: url("../fonts/symbols-sedona.woff") format("woff"),
+       url("../fonts/symbols-sedona.woff2") format("woff2");
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
+
+  font-weight: normal;
+  line-height: 1em;
+  font-family: "symbols-sedona";
+  text-align: center;
+  text-transform: none;
+  text-decoration: inherit;
+  font-style: normal;
+  font-variant: normal;
+
+  speak: none;
+}
+
+.icon-facebook::before { content: "\66"; } /* "f" */
+.icon-twitter::before { content: "\74"; } /* "t" */
+.icon-up-dir::before { content: "\25b2"; } /* "▲" */
+.icon-down-dir::before { content: "\25bc"; } /* "▼" */
+.icon-star::before { content: "\2605"; } /* "★" */
+.icon-check-off::before { content: "\2610"; } /* "☐" */
+.icon-check-on::before { content: "\2611"; } /* "☑" */
+.icon-calendar::before { content: "\e800"; } /* "" */
+.icon-plus::before { content: "\e801"; } /* "" */
+.icon-minus::before { content: "\e802"; } /* "" */
+.icon-youtube::before { content: "\f39e"; } /* "" */
+
+/* -------------------------------------------------------------*/
+
+
 h1 {
   font-size: 21px;
   font-weight: bold;
@@ -30,7 +76,7 @@ h2 {
   outline: 3px solid rgb(210,240,120);
 }
 
-.clearfix:after {
+.clearfix::after {
   content: "";
   display: table;
   clear: both;
@@ -39,12 +85,18 @@ h2 {
 /* ----------------------------------------------------------------------------------------------------------- */
 
 .page-header {
-  position: relative; /* внутри есть абсолютный элемент - sedona-mini-logo */
+  position: relative; /* внутри есть абсолютные элементы */
 }
 
-.page-header-index {
-  /*min-height: 565px;
-  background: url("../img/background.jpg") no-repeat 50% 0;*/
+.page-header-index::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 57px;
+  background: url("../img/deco-shape.png") no-repeat 0 0;
+  background-size: 100% 57px;
 }
 
 .page-header-inner {
@@ -168,6 +220,7 @@ h2 {
   font-size: 14px;
   vertical-align: top;
   line-height: 21px;
+  padding: 0 4%;
 }
 
 .reason-blue {
@@ -230,6 +283,7 @@ h2 {
 
 .reason-gray {
   width: 33.333333%;
+  padding: 0 5%;
 }
 
 .reason-gray h2 {
@@ -326,7 +380,7 @@ h2 {
 }
 
 .search-criterion input {
-  width: 331px;
+  width: 291px;
   height: 38px;
   padding: 0;
   padding-left: 15px;
@@ -340,18 +394,46 @@ h2 {
 }
 
 .search-criterion-visitors input {
-  padding-right: 15px;
+  padding: 0 5px;
   text-align: center;
-  width: 14px;
+  width: 24px;
 }
 
-.search-criterion-visitors .btn {
-  width: 35px;
+.btn-calendar {
+  width: 40px;
+  height: 38px;
+  border: 0;
+  color: #c2c2c2;
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.btn-calendar span {
+  font-family: "symbols-sedona";
+  font-size: 21px;
+  line-height: 38px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.btn-plus-minus {
+  width: 40px;
   height: 38px;
   border: 0;
   color: #a9a9a9;
   background-color: #f2f2f2;
+  cursor: pointer;
 }
+
+.btn-plus-minus span {
+  font-family: "symbols-sedona";
+  font-size: 14px;
+  line-height: 38px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
 
 .search-criterion-visitors:first-child {
   margin-right: 53px;
@@ -437,6 +519,15 @@ h2 {
   margin-right: 0;
 }
 
+.social-btn span {
+  font-family: "symbols-sedona";
+  font-size: 19px;
+  color: white;
+  line-height: 48px;
+  vertical-align: middle;
+}
+
+
 /* ----------------------------------------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------------------------------- */
 
@@ -459,23 +550,56 @@ h2 {
 .hotels-search-criterion h2 {
   padding: 0;
   margin: 0;
+  margin-bottom: 24px;
   font-size: 16px;
   line-height: 21px;
   color: white;
 }
 
 .hotels-search-item {
+  position: relative;
   padding: 0;
   margin: 0;
-  margin-top: 24px;
+  margin-bottom: 24px;
   font-size: 14px;
   line-height: 21px;
 }
 
-.hotels-search-item input,
+
+/*---------------------------------------*/
+/* стилизация чекбоксов */
+
+/*.hotels-search-item input, */
 .hotels-search-item label {
   vertical-align: middle;
 }
+
+.hotels-search-item input[type="checkbox"] {
+  display: none;
+}
+
+.hotels-search-item input[type="checkbox"] + label {
+  display: inline-block;
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+.hotels-search-item input[type="checkbox"] + label::before {
+  content: "\2610";
+  display: block;
+  font-family: "symbols-sedona";
+  font-size: 26px;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  cursor: pointer;
+}
+
+.hotels-search-item input[type="checkbox"]:checked + label::before {
+  content: "\2611";
+}
+
+/*---------------------------------------*/
 
 .infrastructure-criterion {
   float: left;
