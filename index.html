@@ -16,14 +16,14 @@
         <div class="main-menu-container">
           <nav class="main-menu">
             <ul>
-              <li><a class="main-menu-item" href="#">Информация</a></li>
+              <li><a class="main-menu-item main-menu-item-active" href="#">Информация</a></li>
               <li><a class="main-menu-item" href="#">Фото и видео</a></li>
               <li><a class="main-menu-item" href="#">Карта штата</a></li>
-              <li><a class="main-menu-item" href="#">Гостиницы</a></li>
+              <li><a class="main-menu-item" href="hotels.html">Гостиницы</a></li>
             </ul>
           </nav>
         </div>
-        <img class="sedona-mini-logo" src="img/mini-logo.png" width="138" height="70" alt="Logo">
+        <a class="sedona-mini-logo" href="index.html"><img src="img/mini-logo.png" width="138" height="70" alt="Logo"></a>
         <div class="welcome-text">
           <img src="img/welcome2sedona.png" width="458" height="352" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!">
         </div>
@@ -104,25 +104,25 @@
             <form action="#">
               <div class="search-criterion">
                 <label for="arrive-date">Дата заезда:</label>
-                <input type="text" name="arrive-date" id="arrive-date" value="" placeholder="24 апреля 2016">
+                <input type="text" name="arrive-date" id="arrive-date" value="24 апреля 2016" placeholder="">
                 <button class="btn-calendar btn-arrive-date"><span class="icon-calendar"></span></button>
               </div>
               <div class="search-criterion">
                 <label for="leave-date">Дата выезда:</label>
-                <input type="text" name="leave-date" id="leave-date" value="" placeholder="4 июля 2016">
+                <input type="text" name="leave-date" id="leave-date" value="4 июля 2016" placeholder="">
                 <button class="btn-calendar btn-leave-date"><span class="icon-calendar"></span></button>
               </div>
               <div class="search-criterion">
                 <div class="search-criterion-visitors">
                   <label for="adult-visitors">Взрослые:</label>
                   <button class="btn-plus-minus btn-minus-adults"><span class="icon-minus"></span></button>
-                  <input type="text" name="adult-visitors" id="adult-visitors" value="" placeholder="2">
+                  <input type="text" name="adult-visitors" id="adult-visitors" value="2" placeholder="">
                   <button class="btn-plus-minus btn-plus-adults"><span class="icon-plus"></span></button>
                 </div>
                 <div class="search-criterion-visitors">
                   <label for="children-visitors">Дети:</label>
                   <button class="btn-plus-minus btn-minus-children"><span class="icon-minus"></span></button>
-                  <input type="text" name="children-visitors" id="children-visitors" value="" placeholder="0">
+                  <input type="text" name="children-visitors" id="children-visitors" value="0" placeholder="">
                   <button class="btn-plus-minus btn-plus-children"><span class="icon-plus"></span></button>
                 </div>
               </div>

@@ -4,7 +4,7 @@ body {
   font-weight: normal;
   color: #333333;
   line-height: 26px;
-  background-color: white;
+  background-color: #f2f2f2;
   text-transform: uppercase;
 }
 
@@ -32,7 +32,8 @@ body {
   font-family: "symbols-sedona";
   text-align: center;
   text-transform: none;
-  text-decoration: inherit;
+  /*text-decoration: inherit;  Закомментировал, потому что в IE глючит (соц.кнопки) */
+  text-decoration: none;
   font-style: normal;
   font-variant: normal;
 
@@ -73,7 +74,9 @@ h2 {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  outline: 3px solid rgb(210,240,120);
+  /*outline: 3px solid rgb(210,240,120);*/
+  background-color: #ffffff;
+  box-shadow: 0 0 25px 4px #d3d3d3;
 }
 
 .clearfix::after {
@@ -159,6 +162,27 @@ h2 {
   vertical-align: middle;
 }
 
+.main-menu-item:hover {
+  color: #81b3d2;
+}
+
+.main-menu-item:active {
+  color: rgba(0,0,0,0.3);
+}
+
+.main-menu-item-active {
+  color: #766357;
+}
+
+.main-menu-item-active:hover {
+  color: #604e43;
+}
+
+.main-menu-item-active:active {
+  color: rgba(118,99,87,0.3);
+}
+
+
 /*-------------------------------------------*/
 
 .sedona-mini-logo {
@@ -181,16 +205,6 @@ h2 {
   min-height: 432px;
   background: #a7c9df url("../img/background.jpg") no-repeat 50% -56px;
 }
-
-.deco-shape {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  min-height: 57px;
-  background: url("../img/deco-shape.png") no-repeat 50% 0;
-}
-
 
 /* ----------------------------------------------------------------------------------------------------------- */
 
@@ -377,6 +391,7 @@ h2 {
 
 .search-criterion label {
   width: 112px;
+  cursor: pointer;
 }
 
 .search-criterion input {
@@ -387,6 +402,19 @@ h2 {
   border: 0;
   background-color: #f2f2f2;
 }
+
+.search-criterion input:hover {
+  background-color: #ebebeb;
+}
+
+.search-criterion input:active,
+.search-criterion input:focus {
+  background-color: white;
+  box-shadow: inset 0 0 0 2px #e5e5e5;
+  outline: none;
+}
+
+
 
 .search-criterion-visitors {
   display: inline-block;
@@ -416,6 +444,19 @@ h2 {
   vertical-align: middle;
 }
 
+.btn-calendar:hover {
+  color: #000000;
+}
+
+.btn-calendar:active {
+  color: #81b3d2;
+}
+
+.btn-calendar:active,
+.btn-calendar:focus {
+  outline: none;
+}
+
 .btn-plus-minus {
   width: 40px;
   height: 38px;
@@ -433,7 +474,18 @@ h2 {
   vertical-align: middle;
 }
 
+.btn-plus-minus:hover {
+  color: #000000;
+}
 
+.btn-plus-minus:active {
+  color: #81b3d2;
+}
+
+.btn-plus-minus:active,
+.btn-plus-minus:focus {
+  outline: none;
+}
 
 .search-criterion-visitors:first-child {
   margin-right: 53px;
@@ -454,6 +506,20 @@ h2 {
   padding-top: 16px;
   padding-bottom: 16px;
   cursor: pointer;
+}
+
+.search-form input[type="submit"]:hover {
+  background-color: #669ec0;
+}
+
+.search-form input[type="submit"]:active {
+  background-color: #5496bd;
+  color: rgba(255,255,255,0.3);
+}
+
+.search-form input[type="submit"]:active,
+.search-form input[type="submit"]:focus {
+  outline: none;
 }
 
 /* ----------------------------------------------------------------------------------------------------------- */
@@ -513,6 +579,7 @@ h2 {
   background-color: #81b3d2;
   margin: 0;
   margin-right: 6px;
+  cursor: pointer;
 }
 
 .social-btn:last-child {
@@ -522,9 +589,22 @@ h2 {
 .social-btn span {
   font-family: "symbols-sedona";
   font-size: 19px;
+  text-decoration: none;
   color: white;
   line-height: 48px;
   vertical-align: middle;
+}
+
+.social-btn:hover {
+  background-color: #669ec0;
+}
+
+.social-btn:active {
+  background-color: #5496bd;
+}
+
+.social-btn:active span {
+  color: rgba(255,255,255,0.3);
 }
 
 
@@ -598,6 +678,11 @@ h2 {
 .hotels-search-item input[type="checkbox"]:checked + label::before {
   content: "\2611";
 }
+
+.hotels-search-item input[type="checkbox"]:disabled + label {
+  color: #6a6a6a;
+}
+
 
 /*---------------------------------------*/
 
