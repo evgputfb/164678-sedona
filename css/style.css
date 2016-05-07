@@ -32,8 +32,8 @@ body {
   font-family: "symbols-sedona";
   text-align: center;
   text-transform: none;
-  /*text-decoration: inherit;  Закомментировал, потому что в IE глючит (соц.кнопки) */
-  text-decoration: none;
+  text-decoration: inherit;  /* в IE глючит (соц.кнопки).  Можно раскомментировать след.строку - тогда всё OK */
+  /*text-decoration: none; */
   font-style: normal;
   font-variant: normal;
 
@@ -74,7 +74,6 @@ h2 {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  /*outline: 3px solid rgb(210,240,120);*/
   background-color: #ffffff;
   box-shadow: 0 0 25px 4px #d3d3d3;
 }
@@ -612,6 +611,10 @@ h2 {
   vertical-align: middle;
 }
 
+.social-btn .icon-youtube {
+  font-size: 23px;
+}
+
 .social-btn:hover {
   background-color: #669ec0;
 }
@@ -700,7 +703,6 @@ h2 {
   color: #6a6a6a;
 }
 
-
 /*---------------------------------------*/
 
 .infrastructure-criterion {
@@ -750,7 +752,7 @@ h2 {
 
 .sort-direction {
   float: right;
-  width: 50px;
+  width: 80px;
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: right;
@@ -767,7 +769,7 @@ h2 {
   padding: 0;
   display: inline-block;
   list-style-type: none;
-  margin-left: 37px;
+  margin-left: 40px;
   vertical-align: middle;
   font-size: 0;
 }
@@ -778,7 +780,7 @@ h2 {
   line-height: 18px;
   margin: 0;
   padding: 0;
-  margin-right: 30px;
+  margin-right: 33px;
   vertical-align: middle;
 }
 
@@ -788,10 +790,53 @@ h2 {
 
 .sort-type a {
   text-decoration: none;
+  color: rgba(0,0,0,0.48);
+  border-bottom: 1px dotted #81b3d2;
+}
+
+.sort-type a:hover {
+  color: #81b3d2;
+}
+
+.sort-type a:active {
+  color: #000000;
+  border: 0;
+}
+
+.sort-type .sort-type-active {
+  text-decoration: none;
+  color: #81b3d2;
+  border: 0;
 }
 
 .sort-direction a {
+  display: inline-block;
+  width: 20px;
   text-decoration: none;
+  color: #cccccc;
+}
+
+.sort-direction a:hover {
+  color: #000000;
+}
+
+.sort-direction a:active {
+  color: #81b3d2;
+}
+
+.sort-direction span {
+  width: 22px;
+  display: inline-block;
+  font-family: "symbols-sedona";
+  font-size: 23px;
+  line-height: 20px;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.sort-direction .sort-direction-active,
+.sort-direction .sort-direction-active:hover {
+  color: #81b3d2;
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -847,6 +892,9 @@ h2 {
   color: rgba(0,0,0,0.3);
 }
 
+.housing-details a {
+  text-decoration: none;
+}
 
 .housing-type-and-price {
   margin: 0;
@@ -898,6 +946,24 @@ h2 {
   margin-right: 6px;
 }
 
+.btn-hotel-details:hover {
+  background-color: #669ec0;
+}
+
+.btn-hotel-details:active {
+  background-color: #5496bd;
+  color: rgba(255,255,255,0.3);
+}
+
+.btn-make-reservation:hover {
+  background-color: #604e43;
+}
+
+.btn-make-reservation:active {
+  background-color: #503e33;
+  color: rgba(255,255,255,0.3);
+}
+
 .rating-stars {
   font-family: "symbols-sedona";
   font-size: 19px;
@@ -906,28 +972,47 @@ h2 {
   color: #81b3d2;
   vertical-align: middle;
 }
+
 .rating-stars span {
-  margin-left: -1px;
+  display: inline-block;
+  width: 21px;
+  text-align: right;
+  margin-left: 3px;
+  vertical-align: top;
 }
 
 .rating {
-  margin-top: 45px;
+  margin-top: 44px;
+  text-align: right;
+}
+
+.rating span {
+  display: inline-block;;
   background-color: #f2f2f2;
   color: #666666;
   font-size: 14px;
   line-height: 21px;
   text-align: center;
   padding: 3px 0;
+  padding-left: 4px;
+  width: 106px;
+  vertical-align: middle;
 }
+
+
 
 /* -------------------------------------------------------------------------------- */
 /* Стили для фильтра по цене */
+
+.price-criterion h2 {
+  margin-bottom: 10px;
+}
 
 .price-controls {
   position: relative;
   margin: 0;
   padding: 0;
-  margin-top: 10px;
+  margin-top: 0px;
   margin-bottom: 20px;
   height: 32px;
   font-size: 0;
