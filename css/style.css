@@ -32,8 +32,7 @@ body {
   font-family: "symbols-sedona";
   text-align: center;
   text-transform: none;
-  text-decoration: inherit;  /* в IE глючит (соц.кнопки).  Можно раскомментировать след.строку - тогда всё OK */
-  /*text-decoration: none; */
+  text-decoration: inherit;
   font-style: normal;
   font-variant: normal;
 
@@ -228,6 +227,14 @@ h2 {
   text-align: center;
 }
 
+.reason-row-image {
+  min-height: 256px;
+}
+
+.reason-row-icon {
+  min-height: 330px;
+}
+
 .reason {
   display: table-cell;
   font-size: 14px;
@@ -250,7 +257,7 @@ h2 {
 
 .reason-blue p {
   margin-top: 21px;
-  margin-bottom: 52px;
+  margin-bottom: 30px;
 }
 
 .reason-image {
@@ -275,7 +282,7 @@ h2 {
 
 .reason-icon p {
   margin-top: 24px;
-  margin-bottom: 82px;
+  margin-bottom: 60px;
 }
 
 .reason-icon-house {
@@ -292,6 +299,7 @@ h2 {
 
 .reason-row-gray {
   background-color: #eeeeee;
+  min-height: 256px;
 }
 
 .reason-gray {
@@ -306,7 +314,7 @@ h2 {
 
 .reason-gray p {
   margin-top: 21px;
-  margin-bottom: 59px;
+  margin-bottom: 35px;
 }
 
 /* ----------------------------------------------------------------------------------------------------------- */
@@ -381,6 +389,7 @@ h2 {
 }
 
 .search-criterion {
+  position: relative;
   margin-bottom: 29px;
 }
 
@@ -395,7 +404,7 @@ h2 {
 }
 
 .search-criterion input {
-  width: 291px;
+  width: 331px;
   height: 38px;
   padding: 0;
   padding-left: 15px;
@@ -414,8 +423,6 @@ h2 {
   outline: none;
 }
 
-
-
 .search-criterion-visitors {
   display: inline-block;
   font-size: 0;
@@ -428,20 +435,22 @@ h2 {
 }
 
 .btn-calendar {
-  width: 40px;
-  height: 38px;
+  position: absolute;
+  width: 32px;
+  height: 30px;
   border: 0;
-  color: #c2c2c2;
-  background-color: #f2f2f2;
+  background-color:transparent;
   cursor: pointer;
+  top: 5px;
+  right: 4px;
 }
 
-.btn-calendar span {
+.btn-calendar::before {
+  content: "\e800";
   font-family: "symbols-sedona";
   font-size: 21px;
-  line-height: 38px;
-  text-align: center;
-  vertical-align: middle;
+  font-weight: normal;
+  color: #c2c2c2;
 }
 
 .btn-calendar:hover {
@@ -458,6 +467,7 @@ h2 {
 }
 
 .btn-plus-minus {
+  position: relative;
   width: 40px;
   height: 38px;
   border: 0;
@@ -466,12 +476,24 @@ h2 {
   cursor: pointer;
 }
 
-.btn-plus-minus span {
+.btn-minus-adults::before,
+.btn-minus-children::before,
+.btn-plus-adults::before,
+.btn-plus-children::before {
+  content: "\e802";
+  display: block;
+  position: absolute;
   font-family: "symbols-sedona";
   font-size: 14px;
-  line-height: 38px;
-  text-align: center;
-  vertical-align: middle;
+  font-weight: normal;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-plus-adults::before,
+.btn-plus-children::before {
+  content: "\e801";
 }
 
 .btn-plus-minus:hover {
@@ -558,6 +580,10 @@ h2 {
   font-size: 0;
 }
 
+.footer-social-section a {
+  text-decoration: none;  /* это решает проблему ненужного подчёркивания в IE */
+}
+
 .footer-webstudio-section {
   float: right;
   width: 33.333%;
@@ -588,6 +614,7 @@ h2 {
 
 
 .social-btn {
+  position: relative;
   display: inline-block;
   width: 46px;
   height: 48px;
@@ -602,17 +629,30 @@ h2 {
   margin-right: 0;
 }
 
-.social-btn span {
+.social-btn::before {
+  display: block;
   font-family: "symbols-sedona";
   font-size: 19px;
   text-decoration: none;
+  text-transform: none;
   color: white;
-  line-height: 48px;
-  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.social-btn .icon-youtube {
+.social-btn-tw::before {
+  content: "\74";
+}
+
+.social-btn-fb::before {
+  content: "\66";
+}
+
+.social-btn-yt::before {
   font-size: 23px;
+  content: "\f39e";
 }
 
 .social-btn:hover {
@@ -623,7 +663,7 @@ h2 {
   background-color: #5496bd;
 }
 
-.social-btn:active span {
+.social-btn:active::before {
   color: rgba(255,255,255,0.3);
 }
 
@@ -809,11 +849,16 @@ h2 {
   border: 0;
 }
 
+.sort-direction {
+  font-size: 0;
+}
+
 .sort-direction a {
   display: inline-block;
-  width: 20px;
+  width: 22px;
   text-decoration: none;
   color: #cccccc;
+  vertical-align: middle;
 }
 
 .sort-direction a:hover {
@@ -873,6 +918,7 @@ h2 {
   float: right;
   width: 120px;
   padding: 27px 0;
+  text-align: right;
 }
 
 .housing-details h1 {
@@ -884,16 +930,17 @@ h2 {
   color: black;
 }
 
-.housing-details h1:hover {
+.housing-name {
+  text-decoration: none;
+  color: black;
+}
+
+.housing-name:hover {
   color: #81b3d2;
 }
 
-.housing-details h1:active {
+.housing-name:active {
   color: rgba(0,0,0,0.3);
-}
-
-.housing-details a {
-  text-decoration: none;
 }
 
 .housing-type-and-price {
@@ -982,12 +1029,8 @@ h2 {
 }
 
 .rating {
-  margin-top: 44px;
-  text-align: right;
-}
-
-.rating span {
   display: inline-block;;
+  margin-top: 45px;
   background-color: #f2f2f2;
   color: #666666;
   font-size: 14px;
