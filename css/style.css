@@ -1047,6 +1047,11 @@ h2 {
 /* -------------------------------------------------------------------------------- */
 /* Стили для фильтра по цене */
 
+.price-filter {
+  padding: 0;
+  padding-left: 3%;
+}
+
 .price-criterion h2 {
   margin-bottom: 10px;
 }
@@ -1084,9 +1089,20 @@ h2 {
 
 .price-controls .min-price,
 .price-controls .max-price {
-  width: 50%;
   text-align: center;
 }
+
+.price-controls .min-price {
+  margin-left: 10%;
+  width: 40%;
+}
+
+.price-controls .max-price {
+  margin-left: 4%;
+  width: 46%;
+}
+
+
 
 .price-controls input {
   width: 40px;
