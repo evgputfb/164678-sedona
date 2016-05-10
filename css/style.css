@@ -366,16 +366,56 @@ h2 {
   position: relative;
 }
 
+.map-canvas {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
 /* ----------------------------------------------------------------------------------------------------------- */
 
 .search-form {
-  display: block;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 458px;
   padding: 55px;
   background-color: white;
   margin: 0 auto;
   font-size: 0;
   box-shadow: 0 4px 12px 4px rgba(150,150,150,0.4);
+}
+
+@keyframes appearance {
+  0%   {
+    opacity: 0.0;
+  }
+  20%  {
+    opacity: 0.2;
+  }
+  40%  {
+    opacity: 0.4;
+  }
+  60%  {
+    opacity: 0.6;
+  }
+  80%  {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+
+.search-form-show {
+  display: block;
+  animation: appearance 0.5s;
 }
 
 .search-criterion label,
@@ -1101,8 +1141,6 @@ h2 {
   margin-left: 4%;
   width: 46%;
 }
-
-
 
 .price-controls input {
   width: 40px;
