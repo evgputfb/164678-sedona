@@ -2,14 +2,14 @@ body {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   font-weight: normal;
+  text-transform: uppercase;
   color: #333333;
   line-height: 26px;
   background-color: #f2f2f2;
-  text-transform: uppercase;
 }
 
-/* -------------------------------------------------------------*/
-/* Иконочный шрифт */
+/*-------------------------------------------*/
+/*  Иконочный шрифт                          */
 
 @font-face {
   font-weight: normal;
@@ -51,21 +51,20 @@ body {
 .icon-minus::before { content: "\e802"; } /* "" */
 .icon-youtube::before { content: "\f39e"; } /* "" */
 
-/* -------------------------------------------------------------*/
-
+/*-------------------------------------------*/
 
 h1 {
   font-size: 21px;
   font-weight: bold;
-  color: #000000;
   line-height: 26px;
+  color: #000000;
 }
 
 h2 {
   font-size: 21px;
   font-weight: bold;
-  color: #000000;
   line-height: 21px;
+  color: #000000;
 }
 
 .container {
@@ -83,7 +82,7 @@ h2 {
   clear: both;
 }
 
-/* ----------------------------------------------------------------------------------------------------------- */
+/*-------------------------------------------*/
 
 .page-header {
   position: relative; /* внутри есть абсолютные элементы */
@@ -100,14 +99,11 @@ h2 {
   background-size: 100% 57px;
 }
 
-.page-header-inner {
-}
-
 .main-menu-container {
-  background-color: white;
   padding: 0 6%;
   padding-top: 14px;
   padding-bottom: 16px;
+  background-color: white;
 }
 
 .main-menu ul {
@@ -154,10 +150,10 @@ h2 {
 .main-menu-item {
   font-size: 14px;
   font-weight: bold;
-  color: #000000;
   text-transform: uppercase;
   text-decoration: none;
   vertical-align: middle;
+  color: #000000;
 }
 
 .main-menu-item:hover {
@@ -180,7 +176,6 @@ h2 {
   color: rgba(118,99,87,0.3);
 }
 
-
 /*-------------------------------------------*/
 
 .sedona-mini-logo {
@@ -188,9 +183,9 @@ h2 {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 10;
   width: 138px;
   height: 70px;
-  z-index: 10;
 }
 
 /*-------------------------------------------*/
@@ -199,12 +194,12 @@ h2 {
   position: relative;
   padding: 0;
   padding-top: 76px;
-  text-align: center;
   min-height: 432px;
+  text-align: center;
   background: #a7c9df url("../img/background.jpg") no-repeat 50% -56px;
 }
 
-/* ----------------------------------------------------------------------------------------------------------- */
+/*-------------------------------------------*/
 
 .title-content {
   width: 600px;
@@ -218,8 +213,7 @@ h2 {
   margin-bottom: 51px;
 }
 
-
-/* ----------------------------------------------------------------------------------------------------------- */
+/*-------------------------------------------*/
 
 .reason-row {
   display: table;
@@ -237,22 +231,22 @@ h2 {
 
 .reason {
   display: table-cell;
-  font-size: 14px;
-  vertical-align: top;
-  line-height: 21px;
   padding: 0 4%;
+  font-size: 14px;
+  line-height: 21px;
+  vertical-align: top;
 }
 
 .reason-blue {
+  width: 33.333333%;
   color: white;
   background-color: #81b3d2;
-  width: 33.333333%;
 }
 
 .reason-blue h2 {
-  color: white;
   margin-top: 54px;
   margin-bottom: 24px;
+  color: white;
 }
 
 .reason-blue p {
@@ -298,8 +292,8 @@ h2 {
 }
 
 .reason-row-gray {
-  background-color: #eeeeee;
   min-height: 256px;
+  background-color: #eeeeee;
 }
 
 .reason-gray {
@@ -317,17 +311,17 @@ h2 {
   margin-bottom: 35px;
 }
 
-/* ----------------------------------------------------------------------------------------------------------- */
+/*-------------------------------------------*/
 
 .interactive-search {
-  text-align: center;
-  font-size: 14px;
   padding-top: 57px;
+  font-size: 14px;
+  text-align: center;
 }
 
 .interactive-search h2 {
-  font-size: 30px;
   margin: 0;
+  font-size: 30px;
 }
 
 .interactive-search p {
@@ -335,60 +329,58 @@ h2 {
   margin-top: 30px;
 }
 
-
 .btn {
   display: block;
-  text-align: center;
+  padding: 0;
   font-size: 21px;
   font-weight: bold;
   text-decoration: none;
+  text-align: center;
   color: white;
   background-color: #766357;
-  padding: 0;
 }
 
 .btn-search-housing {
-  background-color: #766357;
   width: 568px;
   padding-top: 30px;
   padding-bottom: 30px;
   margin: 0 auto;
   margin-top: 45px;
+  background-color: #766357;
   cursor: pointer;
 }
 
-/* ----------------------------------------------------------------------------------------------------------- */
+/*-------------------------------------------*/
 
 .bg-map-and-search-form {
+  position: relative;
+  margin: 0;
   min-height: 593px;
   background: #cbddaa url("../img/map.jpg") no-repeat 50% 0;
-  margin: 0;
-  position: relative;
 }
 
 .map-canvas {
   position: absolute;
-  display: block;
   top: 0;
   left: 0;
+  display: block;
   width: 100%;
   height: 100%;
 }
 
-
-/* ----------------------------------------------------------------------------------------------------------- */
+/*-------------------------------------------*/
 
 .search-form {
-  display: none;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  display: none;
   width: 458px;
   padding: 55px;
-  background-color: white;
   margin: 0 auto;
   font-size: 0;
+  background-color: white;
   box-shadow: 0 4px 12px 4px rgba(150,150,150,0.4);
 }
 
@@ -448,8 +440,8 @@ h2 {
   height: 38px;
   padding: 0;
   padding-left: 15px;
-  border: 0;
   background-color: #f2f2f2;
+  border: 0;
 }
 
 .search-criterion input:hover {
@@ -469,20 +461,20 @@ h2 {
 }
 
 .search-criterion-visitors input {
+  width: 24px;
   padding: 0 5px;
   text-align: center;
-  width: 24px;
 }
 
 .btn-calendar {
   position: absolute;
-  width: 32px;
-  height: 30px;
-  border: 0;
-  background-color:transparent;
-  cursor: pointer;
   top: 5px;
   right: 4px;
+  width: 32px;
+  height: 30px;
+  background-color:transparent;
+  border: 0;
+  cursor: pointer;
 }
 
 .btn-calendar::before {
@@ -510,9 +502,9 @@ h2 {
   position: relative;
   width: 40px;
   height: 38px;
-  border: 0;
   color: #a9a9a9;
   background-color: #f2f2f2;
+  border: 0;
   cursor: pointer;
 }
 
@@ -521,14 +513,14 @@ h2 {
 .btn-plus-adults::before,
 .btn-plus-children::before {
   content: "\e802";
-  display: block;
   position: absolute;
-  font-family: "symbols-sedona";
-  font-size: 14px;
-  font-weight: normal;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: block;
+  font-family: "symbols-sedona";
+  font-size: 14px;
+  font-weight: normal;
 }
 
 .btn-plus-adults::before,
@@ -559,14 +551,14 @@ h2 {
 
 .search-form input[type="submit"] {
   width: 458px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   font-size: 21px;
   font-weight: bold;
   text-transform: uppercase;
   color: white;
   background-color: #81b3d2;
   border: none;
-  padding-top: 16px;
-  padding-bottom: 16px;
   cursor: pointer;
 }
 
@@ -575,8 +567,8 @@ h2 {
 }
 
 .search-form input[type="submit"]:active {
-  background-color: #5496bd;
   color: rgba(255,255,255,0.3);
+  background-color: #5496bd;
 }
 
 .search-form input[type="submit"]:active,
@@ -584,22 +576,22 @@ h2 {
   outline: none;
 }
 
-/* ----------------------------------------------------------------------------------------------------------- */
+/*-------------------------------------------*/
 
 .footer-container {
-  background-color: rgba(255,255,255,0.9);
-  color: black;
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   padding: 36px 0;
+  color: black;
+  background-color: rgba(255,255,255,0.9);
 }
 
 .footer-container-inner {
-  background-color: #fefefe;
-  color: black;
   padding: 36px 0;
+  color: black;
+  background-color: #fefefe;
 }
 
 .footer-section {
@@ -609,9 +601,9 @@ h2 {
 .footer-hashtag-section {
   float: left;
   width: 33.333%;
+  padding: 11px 0;
   font-size: 21px;
   font-weight: bold;
-  padding: 11px 0;
 }
 
 .footer-social-section {
@@ -652,16 +644,15 @@ h2 {
   background: url("../img/html-academy-logo-gray.png") no-repeat 0 0;
 }
 
-
 .social-btn {
   position: relative;
   display: inline-block;
   width: 46px;
   height: 48px;
-  vertical-align: middle;
-  background-color: #81b3d2;
   margin: 0;
   margin-right: 6px;
+  vertical-align: middle;
+  background-color: #81b3d2;
   cursor: pointer;
 }
 
@@ -670,16 +661,16 @@ h2 {
 }
 
 .social-btn::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: block;
   font-family: "symbols-sedona";
   font-size: 19px;
   text-decoration: none;
   text-transform: none;
   color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .social-btn-tw::before {
@@ -691,8 +682,8 @@ h2 {
 }
 
 .social-btn-yt::before {
-  font-size: 23px;
   content: "\f39e";
+  font-size: 23px;
 }
 
 .social-btn:hover {
@@ -707,11 +698,9 @@ h2 {
   color: rgba(255,255,255,0.3);
 }
 
-
-/* ----------------------------------------------------------------------------------------------------------- */
-/* ----------------------------------------------------------------------------------------------------------- */
-
-/*  Стили для внутренней страницы  */
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*  Стили для внутренней страницы            */
 
 .hotels-search-form {
   min-height: 217px;
@@ -723,8 +712,8 @@ h2 {
 
 .hotels-search-criterion {
   padding: 0;
-  margin: 0;
   padding-top:27px;
+  margin: 0;
 }
 
 .hotels-search-criterion h2 {
@@ -745,11 +734,9 @@ h2 {
   line-height: 21px;
 }
 
+/*-------------------------------------------*/
+/*  Стилизация чекбоксов                     */
 
-/*---------------------------------------*/
-/* стилизация чекбоксов */
-
-/*.hotels-search-item input, */
 .hotels-search-item label {
   vertical-align: middle;
 }
@@ -766,12 +753,12 @@ h2 {
 
 .hotels-search-item input[type="checkbox"] + label::before {
   content: "\2610";
-  display: block;
-  font-family: "symbols-sedona";
-  font-size: 26px;
   position: absolute;
   left: 0;
   top: 1px;
+  display: block;
+  font-family: "symbols-sedona";
+  font-size: 26px;
   cursor: pointer;
 }
 
@@ -783,7 +770,7 @@ h2 {
   color: #6a6a6a;
 }
 
-/*---------------------------------------*/
+/*-------------------------------------------*/
 
 .infrastructure-criterion {
   float: left;
@@ -801,7 +788,7 @@ h2 {
   width: 31%;
 }
 
-/* -------------------------------------------------------------------------------- */
+/*-------------------------------------------*/
 
 .search-results {
   padding: 0 6%;
@@ -811,9 +798,9 @@ h2 {
 
 .search-count {
   float: left;
+  width: 164px;
   margin: 0;
   padding: 30px 0;
-  width: 164px;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -845,22 +832,22 @@ h2 {
 }
 
 .sort-type ul {
-  margin: 0;
-  padding: 0;
   display: inline-block;
-  list-style-type: none;
+  margin: 0;
   margin-left: 40px;
-  vertical-align: middle;
+  padding: 0;
   font-size: 0;
+  vertical-align: middle;
+  list-style-type: none;
 }
 
 .sort-type li {
   display: inline-block;
+  margin: 0;
+  margin-right: 33px;
+  padding: 0;
   font-size: 12px;
   line-height: 18px;
-  margin: 0;
-  padding: 0;
-  margin-right: 33px;
   vertical-align: middle;
 }
 
@@ -910,8 +897,8 @@ h2 {
 }
 
 .sort-direction span {
-  width: 22px;
   display: inline-block;
+  width: 22px;
   font-family: "symbols-sedona";
   font-size: 23px;
   line-height: 20px;
@@ -924,7 +911,7 @@ h2 {
   color: #81b3d2;
 }
 
-/* -------------------------------------------------------------------------------- */
+/*-------------------------------------------*/
 
 .housing {
   padding: 0 6%;
@@ -965,8 +952,8 @@ h2 {
   margin: 0;
   padding: 0;
   font-size: 21px;
-  line-height: 26px;
   font-weight: bold;
+  line-height: 26px;
   color: black;
 }
 
@@ -985,18 +972,18 @@ h2 {
 
 .housing-type-and-price {
   margin: 0;
-  padding: 0;
-  font-size: 0;
   margin-top: 4px;
   margin-bottom: 12px;
+  padding: 0;
+  font-size: 0;
 }
 
 .housing-type,
 .housing-price {
   display: inline-block;
   font-size: 14px;
-  line-height: 21px;
   font-weight: normal;
+  line-height: 21px;
   color: #333333;
   vertical-align: middle;
 }
@@ -1018,19 +1005,19 @@ h2 {
 .btn-hotel-details,
 .btn-make-reservation {
   display: inline-block;
+  max-width: 150px;
+  padding: 3px 17px;
   font-size: 14px;
   font-weight: bold;
   line-height: 21px;
   background-color: #766357;
-  cursor: pointer;
-  padding: 3px 17px;
-  max-width: 150px;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 .btn-hotel-details {
-  background-color: #81b3d2;
   margin-right: 6px;
+  background-color: #81b3d2;
 }
 
 .btn-hotel-details:hover {
@@ -1038,8 +1025,8 @@ h2 {
 }
 
 .btn-hotel-details:active {
-  background-color: #5496bd;
   color: rgba(255,255,255,0.3);
+  background-color: #5496bd;
 }
 
 .btn-make-reservation:hover {
@@ -1047,8 +1034,8 @@ h2 {
 }
 
 .btn-make-reservation:active {
-  background-color: #503e33;
   color: rgba(255,255,255,0.3);
+  background-color: #503e33;
 }
 
 .rating-stars {
@@ -1063,29 +1050,27 @@ h2 {
 .rating-stars span {
   display: inline-block;
   width: 21px;
-  text-align: right;
   margin-left: 3px;
+  text-align: right;
   vertical-align: top;
 }
 
 .rating {
-  display: inline-block;;
+  display: inline-block;
+  width: 106px;
   margin-top: 45px;
-  background-color: #f2f2f2;
-  color: #666666;
+  padding: 3px 0;
+  padding-left: 4px;
   font-size: 14px;
   line-height: 21px;
   text-align: center;
-  padding: 3px 0;
-  padding-left: 4px;
-  width: 106px;
+  color: #666666;
+  background-color: #f2f2f2;
   vertical-align: middle;
 }
 
-
-
-/* -------------------------------------------------------------------------------- */
-/* Стили для фильтра по цене */
+/*-------------------------------------------*/
+/*  Стили для фильтра по цене                */
 
 .price-filter {
   padding: 0;
@@ -1098,11 +1083,11 @@ h2 {
 
 .price-controls {
   position: relative;
+  height: 32px;
   margin: 0;
-  padding: 0;
   margin-top: 0px;
   margin-bottom: 20px;
-  height: 32px;
+  padding: 0;
   font-size: 0;
   border: 2px solid #ffffff;
   border-radius: 2px;
@@ -1113,10 +1098,10 @@ h2 {
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
   width: 2px;
   height: 22px;
   background: #ffffff;
-  transform: translate(-50%, -50%);
 }
 
 .price-controls label {
@@ -1145,8 +1130,8 @@ h2 {
 .price-controls input {
   width: 40px;
   margin: 0;
-  color: inherit;
   font: inherit;
+  color: inherit;
   background: none;
   border: none;
   outline: none;
@@ -1194,18 +1179,18 @@ h2 {
 
 .price-criterion input[type="submit"] {
   display: block;
+  max-width: 200px;
   margin: 0 auto;
   padding: 6px 34px;
   font-size: 14px;
   line-height: 20px;
-  color: #ffffff;
   text-transform: uppercase;
+  color: #ffffff;
   background: transparent;
   border: 2px solid #ffffff;
   border-radius: 2px;
   outline: none;
   cursor: pointer;
-  max-width: 200px;
 }
 
 .price-criterion input[type="submit"]:hover {
@@ -1213,4 +1198,4 @@ h2 {
   background: #ffffff;
 }
 
-/* -------------------------------------------------------------------------------- */
+/*-------------------------------------------*/
