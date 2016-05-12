@@ -485,11 +485,11 @@ h2 {
   color: #c2c2c2;
 }
 
-.btn-calendar:hover {
+.btn-calendar:hover::before {
   color: #000000;
 }
 
-.btn-calendar:active {
+.btn-calendar:active::before {
   color: #81b3d2;
 }
 
@@ -819,7 +819,7 @@ h2 {
 
 .sort-direction {
   float: right;
-  width: 80px;
+  width: 60px;
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: right;
